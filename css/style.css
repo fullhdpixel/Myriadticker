@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('./fonts/Brandon_bld.otf') format('opentype');
+}
+
 @media screen and (max-width: 1050px) {
 
 }
@@ -11,6 +16,27 @@ body, html {
 	margin: 0;
 	max-width: 100%;
 	overflow-x: hidden;
+	background-image:url('../images/background.jpg');
+}
+
+#content h1 {
+	position: relative;
+	top: 55px;
+	font-size: 5em;
+    text-align: center;
+	font-family: 'MyWebFont';
+	font-weight: 700;
+	color: #F1F8E0;
+	text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+}
+
+#content .price {
+	position: relative;
+	top: 55px;
+	font-size: 8em;
+	font-family: 'MyWebFont';
+	color: #F1F8E0;
+	text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
 }
 
 #wrapper {
@@ -32,7 +58,6 @@ body, html {
 	width: 100%;
 	bottom: 0px;
 	height: 50px;
-	background-color: #eee;
 	overflow:hidden;
 	font-size:1em;
 	text-shadow:1px 1px 0px #fff;
