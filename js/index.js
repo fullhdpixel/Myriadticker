@@ -1,8 +1,8 @@
-function getInfo(str) {
-	if (str=="") {
-	location.reload();
-    return;
-	} 
+window.setInterval(function(){
+  getInfo();
+}, 20000);
+
+function getInfo() {
 	if (window.XMLHttpRequest) {
 		xmlhttp=new XMLHttpRequest();
 	} else {
@@ -10,7 +10,9 @@ function getInfo(str) {
 	}
 	xmlhttp.onreadystatechange=function() {
 		if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-			document.getElementById("json").innerHTML=xmlhttp.responseText;
+			var json = xmlhttp.responseText;
+			var parsed = JSON.parse(json);
+			document.getElementById("last").innerHTML = parsed.Last;
 		}
 	}
 	xmlhttp.open("GET","./getAPI.php",true);
