@@ -11,28 +11,19 @@
 				var json = xmlhttp.responseText;
 				var parsed = JSON.parse(json);
 				var last = parsed.Last;
-<<<<<<< HEAD
 				var open = '(';
 				var close = ')';
 				document.getElementById("last").innerHTML = last;
-				document.title = open.concat(last).concat(close);				
-=======
-				document.getElementById("last").innerHTML = last;
-				document.title = last;
->>>>>>> origin/master
+				document.title = open.concat(last).concat(close);
 			}
 		}
 		xmlhttp.open("GET","./getAPI.php",true);
 		xmlhttp.send();
-<<<<<<< HEAD
 /*
-=======
-		
->>>>>>> origin/master
 		var options = $.extend({
-			"step"		: 8,						// How many times should the letters be changed
-			"fps"		: 30,					// Frames Per Second
-			"text"		: last, 					// Use this text instead of the contents
+			"step"		: 8,			// How many times should the letters be changed
+			"fps"		: 30,			// Frames Per Second
+			"text"		: last, 		// Use this text instead of the contents
 			"callback"	: function(){}	// Run once the animation is complete
 		},prop)
 		
@@ -133,13 +124,9 @@
 		});
 	};
 	
-	function randomChar(type){
+	function randomChar(type) {
 		var pool = "0123456789";		
 		var arr = pool.split('');
-<<<<<<< HEAD
 		return arr[Math.floor(Math.random()*arr.length)];*/
-=======
-		return arr[Math.floor(Math.random()*arr.length)];
->>>>>>> origin/master
 	}
 })(jQuery);

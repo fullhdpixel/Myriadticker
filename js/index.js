@@ -1,24 +1,12 @@
 $(document).ready(function() {
 
-<<<<<<< HEAD
-
-	var container = $("#last");
-
-	window.setInterval(function(){
-		container.shuffleLetters();
-	}, 5000);
-
-	container.shuffleLetters();
-
-
-=======
 	var container = $("#last");
 	container.shuffleLetters();
 
 	window.setInterval(function(){
 		container.shuffleLetters();
 	}, 5000);
->>>>>>> origin/master
+
 });
 
 var colors = new Array(
