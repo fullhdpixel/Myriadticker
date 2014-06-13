@@ -7,35 +7,42 @@ $url = 'https://api.mintpal.com/v1/market/stats/MYR/BTC';
 $json = file_get_contents($url);
 $data = json_decode($json, true);
 
-foreach($data as $key => $value) {
-	foreach($value as $elem => $string) {
-		switch ($elem) {
-			case 'coin':
-				$coin = $string;
-			case 'code':
-				$code = $string;
-			case 'exchange':
-				$exchange = $string;
-			case 'last_price':
-				$last_price = $string;
-			case 'yesterday_price':
-				$yesterday_price = $string;
-			case 'change':
-				$change = $string;
-			case '24hhigh':
-				$high = $string;
-			case '24hlow':
-				$low = $string;
-			case '24hvol':
-				$volume = $string;
-			case 'top_bid':
-				$topbid = $string;
-			case 'top_ask':
-				$topask = $string;
+if (!empty($data)) {
+	foreach($data as $key => $value) {
+		foreach($value as $elem => $string) {
+			switch ($elem) {
+				case 'coin':
+					$coin = $string;
+				case 'code':
+					$code = $string;
+				case 'exchange':
+					$exchange = $string;
+				case 'last_price':
+					$last_price = $string;
+				case 'yesterday_price':
+					$yesterday_price = $string;
+				case 'change':
+					$change = $string;
+				case '24hhigh':
+					$high = $string;
+				case '24hlow':
+					$low = $string;
+				case '24hvol':
+					$volume = $string;
+				case 'top_bid':
+					$topbid = $string;
+				case 'top_ask':
+					$topask = $string;
+			}
 		}
 	}
+} else {
+	//Get copy from DB
+	/*
+	$dbinsert = "INSERT INTO `myriadcoin` VALUES (``)";
+	*/
 }
-
+	
 json_encode($data);
 
 $summary = array('Coin' => $coin, 'Code' => $code, 'Base' => $exchange, 'Last' => $last_price, 'Yesterday' => $yesterday_price, 'Change' => $change, 'High' => $high, 'Low' => $low, 'Volume' => $volume, 'Topbid' => $topbid, 'Topask' => $topask);
