@@ -9,8 +9,6 @@ $(document).ready(function() {
 });
 
 function currencySelected(currency) {
-	alert('btc');
-
 	var btc = document.getElementById("showpairs").innerHTML;
 	
 	alert(btc);

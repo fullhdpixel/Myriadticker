@@ -40,7 +40,13 @@ include ('wrapper.php');
 
 <div id="wrapper">	
 
-	<div id="content">
+	<nav class="navbar" role="navigation">
+		<div class="container">
+			<img src="./images/myriad.png" alt="" />
+		</div>
+	</nav>
+
+	<div class="container" id="content">
 		<div class="row">
             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                 <table class="table table-bordered">
@@ -49,14 +55,12 @@ include ('wrapper.php');
 							<td rowspan="4">
 								<div style="margin-top: 10px;" class="hidden-xs ng-binding">
 									<h1>Myriadcoin Price</h1>
-									<div class="mon_">
-										<select id="choise_moneda" onchange="currencySelected(this.value);">
-											<option value="USD">USD</option>
-											<option value="EUR">EURO</option>
-											<option value="BTC">BITCOIN</option>
-										</select>
-									</div>
-								<div><div id="last"></div></div>
+									<select id="choise_moneda" onchange="currencySelected(this.value);">
+										<option value="BTC">BITCOIN</option>
+										<option value="USD">USD</option>
+										<option value="EUR">EURO</option>
+									</select>
+								<h1><div id="last"></div></h2>
 								</div>
 							</td>
 							<td>24hr High</td>
@@ -76,21 +80,19 @@ include ('wrapper.php');
                 </table>
             </div>
         </div>
+	</div>
 	
-		<div id="footer">
-			<div class="container">
-				<div class="col-sm-8 col-sm-offset-2 text-center">
-					<ul class="list-inline center-block">
-						<li><a href="https://www.facebook.com/"><img src="./images/fb.png" alt="facebook"></a></li>
-						<li><a href="https://twitter.com/"><img src="./images/tw.png" alt="twitter"></a></li>
-						<li><a href="http://google.com/"><img src="./images/gplus.png" alt="googleplus"></a></li>
-					</ul>
-				</div>
-				<p class="text-muted creator">Created by <a href="https://twitter.com/fullhdpixel">@fullhdpixel</a></p>
+	<div id="footer">
+		<div class="container">
+			<div class="col-sm-8 col-sm-offset-2 text-center">
+				<ul class="list-inline center-block">
+					<li><a href="https://www.facebook.com/"><img src="./images/fb.png" alt="facebook"></a></li>
+					<li><a href="https://twitter.com/"><img src="./images/tw.png" alt="twitter"></a></li>
+					<li><a href="http://google.com/"><img src="./images/gplus.png" alt="googleplus"></a></li>
+				</ul>
 			</div>
+			<p class="text-muted creator">Created by <a href="https://twitter.com/fullhdpixel">@fullhdpixel</a></p>
 		</div>
-		
-		<div id="gradient"></div>
 	</div>
 </div>
 </body>
