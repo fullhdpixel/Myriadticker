@@ -14,12 +14,18 @@
 				var open = '(';
 				var close = ')';
 				document.getElementById("last").innerHTML = last;
+				document.getElementById("change").innerHTML = parsed.Change;
+				document.getElementById("high").innerHTML = parsed.High;
+				document.getElementById("low").innerHTML = parsed.Low;
+				document.getElementById("volume").innerHTML = parsed.Volume;
+				document.getElementById("topbid").innerHTML = parsed.Topbid;
+				document.getElementById("topask").innerHTML = parsed.Topask;
 				document.title = open.concat(last).concat(close);
 			}
 		}
 		xmlhttp.open("GET","./getAPI.php",true);
 		xmlhttp.send();
-/*
+
 		var options = $.extend({
 			"step"		: 8,			// How many times should the letters be changed
 			"fps"		: 30,			// Frames Per Second
@@ -127,6 +133,6 @@
 	function randomChar(type) {
 		var pool = "0123456789";		
 		var arr = pool.split('');
-		return arr[Math.floor(Math.random()*arr.length)];*/
+		return arr[Math.floor(Math.random()*arr.length)];
 	}
 })(jQuery);

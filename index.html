@@ -41,13 +41,41 @@ include ('wrapper.php');
 <div id="wrapper">	
 
 	<div id="content">
-
-		<div class="myriadcoin container-fluid navbar-static-top">
-			<h1>Myriadcoin live price</h1>
-		</div>
-		
-		<div class="price" id="last">
-		</div>
+		<div class="row">
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                <table class="table table-bordered">
+                    <tbody>
+						<tr>
+							<td rowspan="4">
+								<div style="margin-top: 10px;" class="hidden-xs ng-binding">
+									<h1>Myriadcoin Price</h1>
+									<div class="mon_">
+										<select id="choise_moneda" onchange="currencySelected(this.value);">
+											<option value="USD">USD</option>
+											<option value="EUR">EURO</option>
+											<option value="BTC">BITCOIN</option>
+										</select>
+									</div>
+								<div><div id="last"></div></div>
+								</div>
+							</td>
+							<td>24hr High</td>
+							<td><div id="high"></div></td>
+                        </tr>
+                        <tr>
+							<td>24hr Low</td>
+							<td><div id="low"></div></td>
+                        </tr>
+                        <tr>
+							<td>24hr Change</td>
+							<td>
+								<span style="color: #468847;"><div id="change"></div></span>
+							</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
 	
 		<div id="footer">
 			<div class="container">
