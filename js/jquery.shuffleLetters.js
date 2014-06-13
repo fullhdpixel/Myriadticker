@@ -17,9 +17,9 @@
 				document.getElementById("change").innerHTML = parsed.Change;
 				document.getElementById("high").innerHTML = parsed.High;
 				document.getElementById("low").innerHTML = parsed.Low;
-				document.getElementById("volume").innerHTML = parsed.Volume;
-				document.getElementById("topbid").innerHTML = parsed.Topbid;
-				document.getElementById("topask").innerHTML = parsed.Topask;
+				//document.getElementById("volume").innerHTML = parsed.Volume;
+				//document.getElementById("topbid").innerHTML = parsed.Topbid;
+				//document.getElementById("topask").innerHTML = parsed.Topask;
 				document.title = open.concat(last).concat(close);
 			}
 		}

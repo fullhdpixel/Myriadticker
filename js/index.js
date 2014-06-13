@@ -8,6 +8,7 @@ $(document).ready(function() {
 	}, 5000);
 });
 
+/*
 function currencySelected(currency) {
 	var btc = document.getElementById("showpairs").innerHTML;
 	
@@ -26,3 +27,4 @@ function currencySelected(currency) {
 	}
 	document.getElementById("last").innerHTML = value;
 }
+*/
