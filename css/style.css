@@ -58,8 +58,8 @@ table {
 }
 
 .navbar img {
-	margin: 10px 0 0 40px;
-	height: 60px;
+	margin: 6px 0 0 28px;
+	height: 70px;
 	width: auto;
 }
 
@@ -68,5 +68,4 @@ table {
 	top: 0;
 	width: 100%;
 	min-height: 650px;
-	/*background-image:url('../images/background.jpg');*/
 }
