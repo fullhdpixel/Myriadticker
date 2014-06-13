@@ -13,14 +13,22 @@
 				var last = parsed.Last;
 				var open = '(';
 				var close = ')';
+				var change = parsed.Change
 				document.getElementById("last").innerHTML = last;
-				document.getElementById("change").innerHTML = parsed.Change;
 				document.getElementById("high").innerHTML = parsed.High;
 				document.getElementById("low").innerHTML = parsed.Low;
 				//document.getElementById("volume").innerHTML = parsed.Volume;
 				//document.getElementById("topbid").innerHTML = parsed.Topbid;
 				//document.getElementById("topask").innerHTML = parsed.Topask;
 				document.title = open.concat(last).concat(close);
+				
+				if (change == 0 ) {
+					document.getElementById("change").innerHTML = change;
+				} else if (change > 0) {
+					document.getElementById("changeplus").innerHTML = change;
+				} else {
+					document.getElementById("changemin").innerHTML = change;
+				}
 			}
 		}
 		xmlhttp.open("GET","./getAPI.php",true);
