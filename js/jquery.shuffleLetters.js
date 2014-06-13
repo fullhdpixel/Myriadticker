@@ -11,16 +11,15 @@
 				var json = xmlhttp.responseText;
 				var parsed = JSON.parse(json);
 				var last = parsed.Last;
-				var open = '(';
-				var close = ')';
-				var change = parsed.Change
+				var change = parsed.Change;
+				var domain = ' - MyriadcoinPrice.com';
 				document.getElementById("last").innerHTML = last;
 				document.getElementById("high").innerHTML = parsed.High;
 				document.getElementById("low").innerHTML = parsed.Low;
 				//document.getElementById("volume").innerHTML = parsed.Volume;
 				//document.getElementById("topbid").innerHTML = parsed.Topbid;
 				//document.getElementById("topask").innerHTML = parsed.Topask;
-				document.title = open.concat(last).concat(close);
+				document.title = last.concat(domain);
 				
 				if (change == 0 ) {
 					document.getElementById("change").innerHTML = change;
