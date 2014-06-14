@@ -1,7 +1,7 @@
 <?php
 /*Define constant to connect to database */
 DEFINE('DATABASE_USER', 'root');
-DEFINE('DATABASE_PASSWORD', 'mondeo');
+DEFINE('DATABASE_PASSWORD', '');
 DEFINE('DATABASE_HOST', 'localhost');
 DEFINE('DATABASE_NAME', 'myriadticker');
 

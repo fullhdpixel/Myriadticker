@@ -1,5 +1,5 @@
 (function($){
-	$.fn.shuffleLetters = function(prop){
+	$.fn.update = function(prop){
 		if (window.XMLHttpRequest) {
 			xmlhttp = new XMLHttpRequest();
 		} else {
@@ -16,7 +16,7 @@
 				document.getElementById("high").innerHTML = parsed.High;
 				document.getElementById("low").innerHTML = parsed.Low;
 				document.title = last.concat(domain);
-				
+								
 				if (change == 0 ) {
 					document.getElementById("change").innerHTML = change.concat(' %');
 				} else if (change > 0) {
@@ -32,11 +32,10 @@
 })(jQuery);
 
 $(document).ready(function() {
-
 	var container = $(".price");
-	container.shuffleLetters();
+	container.update();
 
 	window.setInterval(function(){
-		container.shuffleLetters();
+		container.update();
 	}, 5000);
 });
