@@ -35,19 +35,18 @@
 <body>
 
 <?php
-include ('database_connection.php');
-include ('wrapper.php');
+//include ('database_connection.php');
 ?>
 
 <div id="wrapper">	
 
+	<!-- Navbar -->
 	<nav class="navbar" role="navigation">
 		<div class="container">
-
-			<img src="./images/Myriad.png" alt="" />
-
+			<img src="./images/myriad.png" alt=""/>
 		</div>
 	</nav>
+<<<<<<< HEAD
 
 	 <div class="shadow">
 
@@ -81,10 +80,72 @@ include ('wrapper.php');
 
                     </tbody>
                 </table>
-            </div>
-        </div>
-	</div>
+=======
 	
+	<!-- Content -->
+	<div class="container" id="content">
+        <div class="row col-sm-9 col-md-10">
+            <table class="table table-bordered">
+                <tbody>
+					<tr>
+						<td rowspan="4">
+							<div style="margin-top: 10px;" class="hidden-xs ng-binding">
+								<h1>Myriadcoin Price: <small><div id="last"></div></small></h1>		
+							</div>
+						</td>
+						<td>24hr High</td>
+						<td><div id="high"></div></td>
+                    </tr>
+                    <tr>
+						<td>24hr Low</td>
+						<td><div id="low"></div></td>
+                    </tr>
+                    <tr>
+						<td>24hr Change</td>
+						<td>
+							<span style="color: #093;"><div id="changeplus"></div></span>
+							<span style="color: #900;"><div id="changemin"></div></span>
+							<span style="color: #666;"><div id="change"></div></span>
+						</td>
+                       </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row col-sm-9 col-md-10" id="tabs">
+            <!-- Icons -->
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active"><a href="#graph" class="btn btn-sm btn-block" role="button"><i class="fa fa-bar-chart-o fa-2x pull-center"></i></a></li>
+				<li class="active"><a href="#orderbook" class="btn btn-sm btn-block" role="button"><i class="fa fa-list-alt fa-2x pull-center"></i></a></li>
+            </ul>
+            <!-- Tabs -->
+            <div class="tab-content" id="graph">
+                <div class="tab-pane fade in active">
+                    <ul class="list-group" id="selectable">
+                        <li id="outerframe" href="#" class="list-group-item text-center">
+							<!-- Help here (1/2) -->
+							<iframe id="innerframe" scrolling="no" frameborder="0" src="http://www.cryptocoincharts.info/v2/pair/myr/btc/mintpal"></iframe>
+						</li>
+                    </ul>
+                </div>
+            </div>
+			
+			<div class="tab-content" id="orderbook">
+                <div class="tab-pane fade in active">
+                    <ul class="list-group" id="selectable">
+                        <li href="#" class="list-group-item text-center">
+							<h3>Orderbook here</h3>
+							<!-- Help here (2/2)-->
+							<iframe id="innerframe" scrolling="no" frameborder="0" src="http://www.cryptocoincharts.info/v2/pair/myr/btc/mintpal"></iframe>
+						</li>
+                    </ul>
+                </div>
+>>>>>>> FETCH_HEAD
+            </div>
+			
+        </div>
+    </div>
+	
+<<<<<<< HEAD
 	<div id="footer">
       	<div class="container">
 			<div class="col-sm-8 col-sm-offset-2 text-center">
@@ -94,8 +155,38 @@ include ('wrapper.php');
 				</ul>
 			</div>
 			<p class="text-muted creator">Created by <a href="https://twitter.com/fullhdpixel">@fullhdpixel</a></p>
+=======
+	<!-- Footer -->
+	<div class="container" id="footer">
+		<div class="col-sm-8 col-sm-offset-2 text-center">
+			<ul class="list-inline center-block">
+				<li><a href="https://www.facebook.com/themyriadplatform"><img src="./images/fb.png" alt="facebook"></a></li>
+				<li><a href="https://twitter.com/myriadcoin"><img src="./images/tw.png" alt="twitter"></a></li>
+			</ul>
+>>>>>>> FETCH_HEAD
 		</div>
+		<p class="text-muted creator">Created by <a href="https://twitter.com/fullhdpixel">@fullhdpixel</a></p>
 	</div>
 </div>
+
+<script>
+$( document ).ready(function() {
+	$("#selectable").click(function(e) {
+        e.metaKey = true;
+    }).selectable();
+	
+	$("#inbox").selectable();
+	$("#sent").selectable();
+	$("#compose").selectable();
+	
+	
+	$("list-group-item").click(function() {
+		//console.log('poof');
+	});
+	
+	$("#tabs").tabs({ show: { effect: "fade", duration: 400 }});
+});
+</script>
+
 </body>
 </html>
