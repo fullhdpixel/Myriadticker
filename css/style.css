@@ -23,12 +23,13 @@ iframe {
   margin-bottom: 30px;
 
   -moz-border-radius: 12px;
-  -webkit-border-radius: 12px; 
+  -webkit-border-radius: 12px;
   border-radius: 12px; 
 
-  -moz-box-shadow: 4px 4px 14px #000; 
+  -moz: 4px 4px 14px #000; 
   -webkit-box-shadow: 4px 4px 14px #000; 
   box-shadow: 4px 4px 14px #000; 
+
 }
 
 #innerframe {
