@@ -7,6 +7,8 @@ $url = 'https://api.mintpal.com/v1/market/stats/MYR/BTC';
 $json = file_get_contents($url);
 $data = json_decode($json, true);
 
+//var_dump($data);
+
 if (!empty($data)) {
 	foreach($data as $key => $value) {
 		foreach($value as $elem => $string) {
@@ -36,11 +38,6 @@ if (!empty($data)) {
 			}
 		}
 	}
-} else {
-	//Get copy from DB
-	/*
-	$dbinsert = "INSERT INTO `myriadcoin` VALUES (``)";
-	*/
 }
 	
 json_encode($data);

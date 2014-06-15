@@ -19,9 +19,6 @@
 	<link href="./css/style.css" rel="stylesheet" type="text/css">
 	<script src="./js/index.js"></script>
 	
-	<!-- Text style -->
-	<script src="./js/jquery.shuffleLetters.js"></script>
-	
 	<!-- Bootstrap -->
 	<link href="./lib/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	<script src="./lib/js/bootstrap.min.js" type="text/javascript"></script>
@@ -43,14 +40,16 @@
 	<!-- Navbar -->
 	<nav class="navbar" role="navigation">
 		<div class="container">
-			<img src="./images/myriad.png" alt=""/>
+			<a href="./index.html">
+				<img src="./images/myriad.png" alt=""/>
+			</a>
 		</div>
 	</nav>
 	
 	<!-- Content -->
 	<div class="container" id="content">
         <div class="row col-sm-9 col-md-10">
-            <table class="table table-bordered">
+            <table class="table table-bordered" id="selectable">
                 <tbody>
 					<tr>
 						<td rowspan="4">
@@ -85,10 +84,8 @@
             <!-- Tabs -->
             <div class="tab-content" id="graph">
                 <div class="tab-pane fade in active">
-                    <ul class="list-group" id="selectable">
-                        <li id="outerframe" href="#" class="list-group-item text-center">
-							<!-- Help here (1/2) -->
-							<iframe id="innerframe" scrolling="no" frameborder="0" src="http://www.cryptocoincharts.info/v2/pair/myr/btc/mintpal"></iframe>
+                    <ul class="list-group">
+                        <li href="#" class="list-group-item text-center">
 						</li>
                     </ul>
                 </div>
@@ -96,11 +93,8 @@
 			
 			<div class="tab-content" id="orderbook">
                 <div class="tab-pane fade in active">
-                    <ul class="list-group" id="selectable">
+                    <ul class="list-group">
                         <li href="#" class="list-group-item text-center">
-							<h3>Orderbook here</h3>
-							<!-- Help here (2/2)-->
-							<iframe id="innerframe" scrolling="no" frameborder="0" src="http://www.cryptocoincharts.info/v2/pair/myr/btc/mintpal"></iframe>
 						</li>
                     </ul>
                 </div>
@@ -113,8 +107,10 @@
 	<div class="container" id="footer">
 		<div class="col-sm-8 col-sm-offset-2 text-center">
 			<ul class="list-inline center-block">
+				<!--
 				<li><a href="https://www.facebook.com/themyriadplatform"><img src="./images/fb.png" alt="facebook"></a></li>
 				<li><a href="https://twitter.com/myriadcoin"><img src="./images/tw.png" alt="twitter"></a></li>
+				-->
 			</ul>
 		</div>
 		<p class="text-muted creator">Created by <a href="https://twitter.com/fullhdpixel">@fullhdpixel</a></p>
@@ -123,18 +119,8 @@
 
 <script>
 $( document ).ready(function() {
-	$("#selectable").click(function(e) {
-        e.metaKey = true;
-    }).selectable();
 	
-	$("#inbox").selectable();
-	$("#sent").selectable();
-	$("#compose").selectable();
-	
-	
-	$("list-group-item").click(function() {
-		//console.log('poof');
-	});
+	//$('#selectable').selectable();
 	
 	$("#tabs").tabs({ show: { effect: "fade", duration: 400 }});
 });
